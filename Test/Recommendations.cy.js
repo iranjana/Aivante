@@ -6,12 +6,12 @@ import PreferencePage from "../Pages/PreferencePage.cy";
 import PrescriptionpPage from "../Pages/PrescriptionPage.cy";
 import RecLandingPage from "../Pages/RecLandingPage.cy";
 import ProviderPage from "../Pages/ProviderPage.cy";
-import DialysisFacilities from "../Pages/DialysisFacilities.cy";
+import ProviderDialysisFacility from "../Pages/ProviderDialysisFacility.cy";
 import PlanSelection from "../Pages/PlanSelection.cy";
 beforeEach(() => {
   cy.wait(1000);  // Global wait before each test runs
 });
-describe("create recommendation", () => {
+describe("Automation testing", () => {
   it("test", () => {
     cy.visit("https://analytics.dzeecloud.com/medicareAdvantage_sandbox/login");
     const loginPage = new LoginPage();
@@ -28,8 +28,8 @@ describe("create recommendation", () => {
     cy.document().should('have.property', 'readyState', 'complete');
     const homePage = new HomePage();
     homePage.enterRecEmail("rama@gmail.com");
-     homePage.clickHealthProfile();
-     cy.wait(1000);
+    homePage.clickHealthProfile();
+    cy.wait(1000);
     homePage.selectHealthType();
     homePage.enterRecName("Ram");
     // homePage.clickLifeExpectancy.type('96');
@@ -77,15 +77,31 @@ describe("create recommendation", () => {
     providerPage.clickProviderBtn();
 
     cy.wait(3000)
-    const dialysisFacilities = new DialysisFacilities();
-    dialysisFacilities.clickDialysis();
-    dialysisFacilities.enterZipCode("80113");
+    const providerDialysisFacility = new ProviderDialysisFacility();
+    providerDialysisFacility.enterDialysisFacilityName("Davita Englewood Dialysis Center");
+    providerDialysisFacility.enterStreet("Girard");
+    providerDialysisFacility.clickDialysis();
+    providerDialysisFacility.enterZipCode("80113");
     cy.wait(1000)
-    dialysisFacilities.clickZipSearch();
-    dialysisFacilities.clickRadiusIn();
-    dialysisFacilities.clickSearch();
+   providerDialysisFacility.clickZipSearch();
+   providerDialysisFacility.clickCity();
+   providerDialysisFacility.selectCityName();
+   providerDialysisFacility.clickRadiusIn();
+   providerDialysisFacility.clickSearch();
     cy.wait(1000)
-    dialysisFacilities.clickBackBtn();
+   providerDialysisFacility.clickProviderFilter();
+    cy.wait(1000)
+   providerDialysisFacility.enterDistance(10);
+    cy.wait(1000)
+   providerDialysisFacility.clickRating();
+    cy.wait(1000)
+   providerDialysisFacility.selectRatingFive()
+    cy.wait(1000)
+  providerDialysisFacility.clickApplyFilter();
+    cy.wait(1000)
+    providerDialysisFacility.clickClearFilter();
+    cy.wait(1000)
+    providerDialysisFacility.clickBackBtn();
 
     cy.wait(2000)
     const medicalEquipment = new MedicalEquipment();

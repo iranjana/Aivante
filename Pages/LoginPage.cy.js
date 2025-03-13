@@ -3,6 +3,10 @@ class LoginPage {
     passwordEle = '#mat-input-1';
     loginEle = '.mat-button-wrapper';
 
+    //usernameEle = cy.get('input[formcontrolname="userName"]');
+    //passwordEle = cy.get('input[formcontrolname="password"]');
+    //loginEle = cy.contains('Log In');
+
     enterUsername(username) {
         cy.get(this.usernameEle).type(username);
     }

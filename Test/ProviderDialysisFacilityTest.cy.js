@@ -11,85 +11,85 @@ describe('providerdialysisfacility', () => {
 
             it('TC-2 dialysisfacility street', () => {
                 const providerDialysisFacility = new ProviderDialysisFacility();
-                dialysisFacilities.enterStreet("Girard");
+               providerDialysisFacility.enterStreet("Girard");
             });
 
             it('TC-3 dialysisfacility clickdialysis', () => {
                 const providerDialysisFacility = new ProviderDialysisFacility();
-                dialysisFacilities.clickDialysis();
+                providerDialysisFacility.clickDialysis();
             });
 
             it('TC-4 dialysisfacility centerzipcode', () => {
                 const providerDialysisFacility = new ProviderDialysisFacility();
-                dialysisFacilities.enterZipCode("80113");
+                providerDialysisFacility.enterZipCode("80113");
             });
 
             it('TC-5 dialysisfacility clickzip search', () => {
                 const providerDialysisFacility = new ProviderDialysisFacility();
                 cy.wait(1000)
-                dialysisFacilities.clickZipSearch();
+                providerDialysisFacility.clickZipSearch();
             });
 
             it('TC-6 dialysisfacility clickcity', () => {
                 const providerDialysisFacility = new ProviderDialysisFacility();
-                dialysisFacilities.clickCity();
+                providerDialysisFacility.clickCity();
             });
 
             it('TC-7 dialysisfacilitys electcityname', () => {
                 const providerDialysisFacility = new ProviderDialysisFacility();
-                dialysisFacilities.selectCityName();
+                providerDialysisFacility.selectCityName();
             });
 
             t('TC-8 dialysisfacility clickradius', () => {
                 const providerDialysisFacility = new ProviderDialysisFacility();
-                dialysisFacilities.clickRadiusIn();
+                providerDialysisFacility.clickRadiusIn();
             });
 
             it('TC-9 dialysisfacility clicksearch', () => {
                 const providerDialysisFacility = new ProviderDialysisFacility();
-                dialysisFacilities.clickSearch();
+                providerDialysisFacility.clickSearch();
             });
 
             it('TC-10 dialysisfacility clickproviderfilter', () => {
                 const providerDialysisFacility = new ProviderDialysisFacility();
                 cy.wait(1000)
-                dialysisFacilities.clickProviderFilter();
+                providerDialysisFacility.clickProviderFilter();
             });
 
             it('TC-11 dialysisfacility enterdistance', () => {
                 const providerDialysisFacility = new ProviderDialysisFacility();
                 cy.wait(1000)
-                dialysisFacilities.enterDistance(10);
+                providerDialysisFacility.enterDistance(10);
             });
 
             it('TC-11 dialysisfacility clickrating', () => {
                 const providerDialysisFacility = new ProviderDialysisFacility();
                 cy.wait(1000)
-                dialysisFacilities.clickRating();
+                providerDialysisFacility.clickRating();
             });
 
             it('TC-12 dialysisfacility select ratingfive', () => {
                 const providerDialysisFacility = new ProviderDialysisFacility();
                 cy.wait(1000)
-                dialysisFacilities.selectRatingFive();
+                providerDialysisFacility.selectRatingFive();
             });
 
             it('TC-13 dialysisfacility clickapply filter', () => {
                 const providerDialysisFacility = new ProviderDialysisFacility();
                 cy.wait(1000)
-                dialysisFacilities.clickApplyFilter();
+                providerDialysisFacility.clickApplyFilter();
             });
 
             it('TC-13 dialysisfacility clickclear filter', () => {
                 const providerDialysisFacility = new ProviderDialysisFacility();
                 cy.wait(1000)
-                dialysisFacilities.clickClearFilter();
+                providerDialysisFacility.clickClearFilter();
             });
 
             it('TC-14 dialysisfacility clickback button', () => {
                 const providerDialysisFacility = new ProviderDialysisFacility();
                 cy.wait(1000)
-                dialysisFacilities.clickBackBtn();
+               providerDialysisFacility.clickBackBtn();
             });
 
         })
